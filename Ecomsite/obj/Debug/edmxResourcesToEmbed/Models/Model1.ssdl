@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="laptopsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="category_id" />
+    </Key>
+    <Property Name="category_id" Type="int" Nullable="false" />
+    <Property Name="category_code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="category_name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="laptop_model">
+    <Key>
+      <PropertyRef Name="laptop_id" />
+    </Key>
+    <Property Name="laptop_id" Type="int" Nullable="false" />
+    <Property Name="category_id" Type="int" Nullable="false" />
+    <Property Name="laptop_name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="description" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="imagepath" Type="nvarchar" MaxLength="550" Nullable="false" />
+    <Property Name="laptop_price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="laptopsModelStoreContainer">
+    <EntitySet Name="category" EntityType="Self.category" Schema="master" store:Type="Tables" />
+    <EntitySet Name="laptop_model" EntityType="Self.laptop_model" Schema="master" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

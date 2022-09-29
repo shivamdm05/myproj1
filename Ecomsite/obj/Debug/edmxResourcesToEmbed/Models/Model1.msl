@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="laptopsModelStoreContainer" CdmEntityContainer="laptopsEntities">
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="laptopsModel.category">
+        <MappingFragment StoreEntitySet="category">
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+          <ScalarProperty Name="category_code" ColumnName="category_code" />
+          <ScalarProperty Name="category_name" ColumnName="category_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="laptop_model">
+      <EntityTypeMapping TypeName="laptopsModel.laptop_model">
+        <MappingFragment StoreEntitySet="laptop_model">
+          <ScalarProperty Name="laptop_id" ColumnName="laptop_id" />
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+          <ScalarProperty Name="laptop_name" ColumnName="laptop_name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="imagepath" ColumnName="imagepath" />
+          <ScalarProperty Name="laptop_price" ColumnName="laptop_price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
